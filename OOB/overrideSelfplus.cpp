@@ -18,7 +18,7 @@ public:
 		m_Num = 0;
 	}
 	//前置++
-	MyInteger& operator++() {
+	MyInteger& operator ++() {
 		//先++
 		m_Num++;
 		//再返回
@@ -26,7 +26,7 @@ public:
 	}
 
 	//后置++
-	MyInteger operator++(int) {
+	MyInteger operator ++(int) {
 		//先返回
 		MyInteger temp = *this; //记录当前本身的值，然后让本身的值加1，但是返回的是以前的值，达到先返回后++；
 		m_Num++;
@@ -62,7 +62,7 @@ void test02() {
 int main() {
 
 	test01();
-	//test02();
+	// test02();
 
 	return 0;
 }
