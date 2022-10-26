@@ -1,14 +1,16 @@
 /*
  * @Author: lhq
  * @Date: 2022-10-26 14:47:52
- * @LastEditTime: 2022-10-26 14:49:31
+ * @LastEditTime: 2022-10-26 15:28:30
  * @LastEditors: lhq
  * @Description: 解决父类指针无法释放子类堆区内存数据的问题。需要具体的实现。
  * @FilePath: \cpp-pro\polymorphism\virtualDeconstructor.cpp
  */
+#include <iostream>
+using namespace std;
+
 class Animal {
 public:
-
 	Animal()
 	{
 		cout << "Animal 构造函数调用！" << endl;
@@ -20,8 +22,6 @@ public:
 	//{
 	//	cout << "Animal虚析构函数调用！" << endl;
 	//}
-
-
 	virtual ~Animal() = 0;
 };
 
@@ -37,12 +37,13 @@ public:
 	Cat(string name)
 	{
 		cout << "Cat构造函数调用！" << endl;
-		m_Name = new string(name);
+		m_Name = new string(name);    //堆内存
 	}
 	virtual void Speak()
 	{
 		cout << *m_Name <<  "小猫在说话!" << endl;
 	}
+
 	~Cat()
 	{
 		cout << "Cat析构函数调用!" << endl;
@@ -53,7 +54,7 @@ public:
 	}
 
 public:
-	string *m_Name;
+	string *m_Name;    
 };
 
 void test01()
