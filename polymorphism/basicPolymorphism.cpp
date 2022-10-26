@@ -1,3 +1,11 @@
+/*
+ * @Author: lhq
+ * @Date: 2022-10-26 13:34:41
+ * @LastEditTime: 2022-10-26 13:44:50
+ * @LastEditors: lhq
+ * @Description: 多态基本概念。多态就是为不同类对象提供统一接口。子类重写父类的虚函数。
+ * @FilePath: \cpp-pro\polymorphism\basicPolymorphism.cpp
+ */
 #include <iostream>
 using namespace std;
 
@@ -48,6 +56,10 @@ void DoSpeak(Animal & animal)
 
 void test01()
 {
+	// Animal ani;
+	// ani.speak();
+	// DoSpeak(ani);
+	
 	Cat cat;
 	DoSpeak(cat);
 
