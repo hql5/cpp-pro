@@ -1,0 +1,6 @@
+要求参数有序的算法：
+1. binary_search(beg, end, value)
+2. merge(beg1, end1, beg2, end2, destination)
+3. set_intersection(beg1, end1, beg2, end2, destination)
+4. set_union(beg1, end1, beg2, end2, destination)
+5. set_difference(beg1, end1, beg2, end2, destination)
